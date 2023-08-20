@@ -1,0 +1,22 @@
+// custom
+.bg-lightgray {
+    background: $gray-100;
+}
+
+.font-roboto {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.material-icons-outlined,.material-icons {
+    vertical-align: middle;
+}
+
+.link-hover {
+    &:hover, &:active {
+        color: $primary;
+    }
+}
+
+ul {
+    list-style-type: disc;
+}

@@ -1,4 +1,20 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.menu {
+  min-width: 296px;
+}
+
+.nav-item.active {
+  a {
+    position: relative;
+    color: $primary;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 4px;
+      height: 32px;
+      background: $primary;
+    }
+  }
 }

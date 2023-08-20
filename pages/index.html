@@ -1,57 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+<html lang="zh">
 
-    <h1 class="index-title">我是首頁</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- google icon -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+    rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <title>index</title>
+</head>
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
+<body>
+  <%- include('./layout/header'); -%>
+  
+
+  <main class="main px-6">
+    <header class="d-flex justify-content-between align-items-center py-6">
+      <div class="d-flex gap-7 align-items-center">
+        <h2 class="fw-bold fs-4 mb-0">Assignment</h2>
+        <div class="dropdown">
+          <button class="btn d-flex gap-2 fw-bold link-hover" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            All Courses
+            <span class="material-icons">
+              expand_more
+            </span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><button class="dropdown-item" type="button">Vue</button></li>
+            <li><button class="dropdown-item" type="button">Scss</button></li>
+            <li><button class="dropdown-item" type="button">React</button></li>
+            <li><button class="dropdown-item" type="button">Javascript</button></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+      <ul class="list-unstyled d-flex gap-4 align-items-center mb-0">
+        <li>
+          <a href="" class="link-hover">
+            <span class="material-icons">
+              search
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="link-hover">
+            <span class="material-icons">
+              notifications_active
+            </span>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div class="container-fluid p-0">
+      <div class="row">
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="col-4">
+          <div class="d-flex gap-7 align-items-center mb-2">
+            <div class="dropdown">
+              <button class="p-0 border-0 btn d-flex gap-2 fw-bold link-hover" type="button" id="dropdownMenu2"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                All(4)
+                <span class="material-icons text-primary">
+                  expand_more
+                </span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Vue</button></li>
+                <li><button class="dropdown-item" type="button">Scss</button></li>
+                <li><button class="dropdown-item" type="button">React</button></li>
+                <li><button class="dropdown-item" type="button">Javascript</button></li>
+              </ul>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action active p-8">
+              <a href="" class="">
+                <div class="d-flex justify-content-between">
+                  <h4 class="fw-normal fs-8 lh-lg mb-1">Chapter Assignment 2</h4>
+                  <p class="fs-8 mb-0 lh-lg">4 hrs ago</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h3 class="fs-6 fw-bold mb-0 lh-base">Please check this file…</h3>
+                  <p class="fs-8 mb-0 lh-lg text-muted">Emily Wang</p>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-action p-8">
+              <a href="" class="">
+                <div class="d-flex justify-content-between">
+                  <h4 class="fw-normal fs-8 lh-lg mb-1">Chapter Assignment 1</h4>
+                  <p class="fs-8 mb-0 lh-lg">12 hrs ago</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h3 class="fs-6 fw-bold mb-0 lh-base">My Homework</h3>
+                  <p class="fs-8 mb-0 lh-lg text-muted">David Xu</p>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-action p-8">
+              <a href="" class="">
+                <div class="d-flex justify-content-between">
+                  <h4 class="fw-normal fs-8 lh-lg mb-1">Final Assignment</h4>
+                  <p class="fs-8 mb-0 lh-lg">18 hrs ago</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h3 class="fs-6 fw-bold mb-0 lh-base">Have a problem with this…</h3>
+                  <p class="fs-8 mb-0 lh-lg text-muted">Tony Wei</p>
+                </div>
+              </a>
+            </li>
+            <li class="list-group-item list-group-item-action p-8">
+              <a href="" class="">
+                <div class="d-flex justify-content-between">
+                  <h4 class="fw-normal fs-8 lh-lg mb-1">Final Assignment</h4>
+                  <p class="fs-8 mb-0 lh-lg">19 hrs ago</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <h3 class="fs-6 fw-bold mb-0 lh-base">Did I do it right?</h3>
+                  <p class="fs-8 mb-0 lh-lg text-muted">Christina Lin</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-8">
+          <p class="text-muted fs-8 lh-lg mb-2 text-end">2 comments</p>
+          <div class="card">
+            <div class="card-header d-flex justify-content-between py-8 px-3">
+              <div>
+                <h4 class="fs-8 lh-lg mb-1">Chapter Assignment 2 / HTML&CSS</h4>
+                <h3 class="fs-6 fw-bold mb-0 lh-base">Please check this file for me, thanks!</h3>
+              </div>
+              <div class="btn-group dropstart">
+                <button type="button" class="btn border-0 link-hover" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="material-icons">
+                    more_vert
+                  </span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  <li><a class="dropdown-item" href="#">Menu item</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body p-3 pe-6">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item p-0 pb-3 border-0 d-flex">
+                  <div class="user-img me-2"><img src="../assets/images/emilywang.jpeg" class="rounded-circle"
+                      alt="emily wang avatar"></div>
+                  <div class="pb-3 border-bottom">
+                    <div class="mb-3">
+                      <h4 class="fs-6 fw-bold mb-1">Emily Wang</h4>
+                      <time class="text-muted lh-lg fs-8">10:38 AM (4 hours ago)</time>
+                    </div>
+                    <p class="fs-7 lh-base mb-0">Hi Teacher, the attached file is my homework of chapter 2. And here
+                      comes a question: Why in the following code the height of the <code
+                        class="text-primary font-roboto fs-7 bg-light">div</code> is bigger than the height of the <code
+                        class="text-primary font-roboto fs-7 bg-light">img</code> ? There is a gap below the image, but
+                      it doesn’t seems to be a padding/margin.</p>
+                    <p class="fs-7 lh-base mb-3">What is the gap or extra space below image?</p>
+                    <a href="" class="btn border d-inline-flex py-2 px-8 gap-2 bg-lightgray"
+                      download="HW-2-David.zip"><span class="material-icons">
+                        attach_file
+                      </span>HW-2-David.zip</a>
+                  </div>
+                </li>
+                <li class="list-group-item p-0 pb-3 border-0 d-flex">
+                  <div class="account me-2"><img src="../assets/images/andychen.jpeg" class="rounded-circle"
+                      alt="andy chen avatar"></div>
+                  <div class="pb-3">
+                    <div class="mb-3">
+                      <h4 class="fs-6 fw-bold mb-1">Andy Chen (You)</h4>
+                      <time class="text-muted lh-lg fs-8">13:24 AM (1 hours ago)</time>
+                    </div>
+                    <p class="fs-7 lh-base">Hi David, by default, an image is rendered inline, like a letter so it sits
+                      on the same line that a, b, c and d sit on. There is space below that line for the descenders you
+                      find on letters like g, j, p and q.</p>
+                    <p class="fs-7 lh-base">You can:</p>
+                    <ul>
+                      <li>adjust the <code class="text-primary font-roboto fs-7 bg-light">vertical-align</code> of the
+                        image to position it elsewhere (e.g. the middle ) or</li>
+                      <li>change the <code class="text-primary font-roboto fs-7 bg-light">display</code> so it isn’t
+                        inline.</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3 position-relative">
+            <div class="d-flex gap-4">
+              <a href="#" class="link-hover"><span class="material-icons">
+                  chevron_left
+                </span></a>
+              <a href="#" class="link-hover"><span class="material-icons">
+                  chevron_right
+                </span></a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <button class="btn btn-outline-primary lh-base px-6 py-2" type="button">Mark as read</button>
+              <button class="btn bg-primary text-white lh-base px-6 py-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop">Reply</button>
+            </div>
+            <div class="offcanvas position-absolute w-100 border" id="offcanvasTop" data-bs-backdrop="false">
+              <div id="editor">
+                <p>This is some sample content.</p>
+              </div>
+              <div class="d-flex justify-content-end gap-3">
+                <button type="button" class="btn btn-outline-primary rounded-6 px-6 py-2"
+                  data-bs-dismiss="offcanvas">Cancel</button>
+                <button type="button" class="btn btn-primary rounded-6 px-6 py-2">Reply</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
     </div>
+  </main>
 
-    <%- include('./layout/footer'); -%>
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let navItem = document.querySelectorAll('.nav-item');
+      navItem.forEach(item => {
+        item.addEventListener('click', () => {
+          navItem.forEach(otherItem => {
+            otherItem.classList.remove('active');
+          });
+          item.classList.add('active');
+        });
+      });
+    });
+  </script>
+  <script>
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(editor => {
+        editor.editing.view.change(writer => {
+          writer.setStyle('min-height', '320px', editor.editing.view.document.getRoot());
+        });
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+  <script type="module" src="../main.js"></script>
+</body>
 
-    <script type="module" src="../main.js"></script>
-  </body>
 </html>
