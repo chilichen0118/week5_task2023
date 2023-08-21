@@ -9,7 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
     rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
   <title>Admin</title>
 </head>
 
@@ -499,7 +499,19 @@
       </div>
     </main>
 
-
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navItems = document.querySelectorAll('.nav-item a');
+        navItems.forEach(link => {
+          link.addEventListener('click', () => {
+            navItems.forEach(otherLink => {
+              otherLink.parentElement.classList.remove('active');
+            });
+            link.parentElement.classList.add('active');
+          });
+        });
+      });
+    </script>
     <script type="module" src="../main.js"></script>
 </body>
 
